@@ -1,0 +1,104 @@
+.submit-error {
+  margin-top: -16px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: red;
+  font-size: 13px;
+}
+form .signUp-linkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  margin: auto;
+  margin-top: 18px;
+
+  font: 400 13.3333px Arial !important;
+}
+
+.signup-link {
+  text-decoration: none;
+  color: #7159c1 !important;
+  transition: all 300ms;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+/*----------------Animation Setup-------------*/
+form {
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  overflow: hidden;
+}
+/*child 1 do form*/
+form .input-block:nth-child(1) {
+  animation: move 300ms;
+  animation-delay: 100ms;
+  animation-fill-mode: backwards; /*posição iniial*/
+}
+
+/*child 2 do form*/
+form .input-block:nth-child(2) {
+  animation: move 300ms;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+
+form .btn-login {
+  animation: move 300ms;
+  animation-delay: 300ms;
+  animation-fill-mode: backwards;
+}
+
+/* Quando clicar no botão, sumir com o form */
+.form-hide {
+  animation: down 800ms forwards;
+}
+
+/* FORM Denied */
+form.validation-error {
+  animation: denied 200ms linear, fadeIn paused;
+  animation-iteration-count: 2;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: white;
+  }
+
+  .form-wrapper {
+    width: 500px;
+  }
+
+  form .input-block label {
+    font-size: 18px;
+  }
+
+  form .input-block input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  form .btn-login {
+    display: block;
+    min-width: 200px;
+    border: none;
+    border-radius: 25px;
+    margin: auto;
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  form .signup-link {
+    font-size: 18px !important;
+  }
+}

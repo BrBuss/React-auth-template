@@ -1,0 +1,190 @@
+.App__container {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+.signIn {
+  min-height: 100vh;
+
+  width: 100%;
+}
+
+body {
+  background-color: #7159c1;
+  font-family: Roboto, Arial, sans-serif;
+}
+.title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  color: white;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  margin: 20px 0;
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 15px;
+}
+
+form .input-block {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.input-label {
+  display: flex;
+  justify-content: left;
+  padding-left: 8px;
+}
+
+form .input-block label {
+  font-size: 14px;
+  color: darkslateblue;
+}
+
+form .input-block input {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+  padding: 7px;
+  font-size: 16px;
+  color: #7159c1;
+  border-radius: 5px;
+  border: 1px solid #ccddef;
+  outline-color: #7159c1;
+}
+
+form .btn-login {
+  display: block;
+  min-width: 120px;
+  border: none;
+  background-color: #7159c1;
+  color: white;
+  border-radius: 25px;
+  margin: auto;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.btn-login:focus {
+  border: none;
+  outline: 0;
+}
+
+.divider {
+  text-align: center;
+  padding-top: 1px;
+  line-height: 0;
+
+  width: 70%;
+
+  height: 1px;
+  border-top: 1px solid #e7e7e7;
+
+  margin-bottom: 8px;
+  z-index: 1;
+}
+
+/*--------------Animations creation-----------*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes down {
+  from {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes denied {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-5%);
+  }
+  70% {
+    transform: translateX(5%);
+  }
+}
